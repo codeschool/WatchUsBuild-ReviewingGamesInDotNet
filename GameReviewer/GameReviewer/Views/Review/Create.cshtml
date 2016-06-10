@@ -1,0 +1,22 @@
+﻿@model GameReviewer.Models.Review
+
+<h1>Add Review to @ViewData["Game"]</h1>
+<hr/>
+
+<form class="form-inline mbm" asp-action="Create" asp-controller="Review" asp-route-gamename="@ViewData["Game"]">
+    <div>
+        <label asp-for="Rating"></label>
+    </div>
+    <div class="form-group">
+        <input class="form-control" asp-for="Rating" />
+    </div>
+    <div>
+        <label asp-for="Comments"></label>
+    </div>
+    <div class="form-group">
+        <input class="form-control" asp-for="Comments" />
+    </div>
+    <div style="margin-top:5px;">
+        <input class="btn" type="submit" value="Add Review to @ViewData["Game"]" />
+    </div>
+</form>

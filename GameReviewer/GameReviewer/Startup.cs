@@ -44,7 +44,7 @@ namespace GameReviewer
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Game/Error");
             }
 
             app.UseStaticFiles();
@@ -53,7 +53,7 @@ namespace GameReviewer
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Game}/{action=Index}/{id?}");
             });
         }
     }
