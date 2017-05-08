@@ -1,0 +1,11 @@
+﻿@model List<GameReviewer.Models.Game>
+
+<h1>Games</h1>
+<hr />
+<a asp-action="Create" asp-controller="Game">Add Game to List</a>
+<ul>
+    @foreach (var game in Model)
+    {
+        <li>@game.Name (@game.Rating) <a asp-action="Create" asp-controller="Review" asp-route-game="@game.Name">Review Game</a></li>
+    }
+</ul>
